@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
     const message = encodeURIComponent(
       `Hi! I'd like to order:\n\n${product.name}\nPrice: ৳${displayPrice}\n\nPlease confirm availability and delivery details.`,
     )
-    const whatsappUrl = `https://wa.me/8801234567890?text=${message}`
+    const whatsappUrl = `https://wa.me/8801752304601?text=${message}`
     window.open(whatsappUrl, "_blank")
   }
 

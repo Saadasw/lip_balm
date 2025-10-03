@@ -227,7 +227,7 @@ export default function Home() {
               <h4 className="font-bold text-white text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h4>
               <div className="space-y-2">
                 <p className="text-sm sm:text-base text-blue-200 flex items-center gap-2 justify-center sm:justify-start">
-                  📱 WhatsApp: +880 1234-567890
+                  📱 WhatsApp: +880 1752-304601
                 </p>
                 <p className="text-sm sm:text-base text-blue-200 flex items-center gap-2 justify-center sm:justify-start">
                   📍 Dhaka, Bangladesh

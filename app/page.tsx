@@ -75,13 +75,13 @@ export default function Home() {
       <header className="sticky top-0 z-30 bg-black/70 backdrop-blur-2xl border-b border-primary/15">
         <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
           <div className="flex flex-col items-center gap-3 text-center">
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <div className="w-20 h-20 flex items-center justify-center bg-black/40 border border-primary/30 rounded-2xl shadow-[0_0_35px_rgba(245,211,140,0.35)]">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <div className="w-28 h-28 flex items-center justify-center bg-black/40 border border-primary/30 rounded-3xl shadow-[0_0_45px_rgba(245,211,140,0.45)]">
                 <Image
                   src="/shafatain-logo.png"
                   alt="Shafatain logo"
-                  width={64}
-                  height={64}
+                  width={140}
+                  height={140}
                   className="object-contain"
                   priority
                 />

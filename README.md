@@ -1,4 +1,4 @@
-# লিপ জেল শপ - LipGel Shop Dhaka
+# Shafatain Lip Atelier - Dhaka
 
 A modern, mobile-first e-commerce website for premium lip care products in Dhaka, Bangladesh.
 

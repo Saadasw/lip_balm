@@ -102,7 +102,7 @@ export function AdminProductList({ products }: AdminProductListProps) {
 
                       <div className="space-y-1">
                         <Label htmlFor={`edit-price-${product.id}`} className="text-xs">
-                          Price (৳)
+                          Price (BDT)
                         </Label>
                         <Input
                           id={`edit-price-${product.id}`}
@@ -140,7 +140,7 @@ export function AdminProductList({ products }: AdminProductListProps) {
 
                       <div className="space-y-1">
                         <Label htmlFor={`edit-winter-${product.id}`} className="text-xs">
-                          Winter Offer (৳)
+                          Winter Offer (BDT)
                         </Label>
                         <Input
                           id={`edit-winter-${product.id}`}
@@ -188,12 +188,12 @@ export function AdminProductList({ products }: AdminProductListProps) {
                       <div className="flex items-center gap-4 mt-2 text-sm">
                         {product.winter_offer_price ? (
                           <>
-                            <span className="font-semibold text-red-600">৳{product.winter_offer_price}</span>
-                            <span className="text-gray-400 line-through">৳{product.price}</span>
+                            <span className="font-semibold text-red-600">BDT {product.winter_offer_price}</span>
+                            <span className="text-gray-400 line-through">BDT {product.price}</span>
                             <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded">Winter Offer</span>
                           </>
                         ) : (
-                          <span className="font-semibold text-pink-600">৳{product.price}</span>
+                          <span className="font-semibold text-pink-600">BDT {product.price}</span>
                         )}
                         <span className="text-gray-500">Stock: {product.stock}</span>
                       </div>

@@ -15,8 +15,8 @@ const notoSansBengali = Noto_Sans_Bengali({
 })
 
 export const metadata: Metadata = {
-  title: "লিপ জেল শপ - LipGel Shop Dhaka",
-  description: "Premium lip care products for Dhaka. Natural ingredients, fast delivery.",
+  title: "Shafatain Lip Atelier - Dhaka",
+  description: "Premium lip care experiences in Dhaka crafted with natural luxury ingredients.",
   generator: "v0.app",
 }
 

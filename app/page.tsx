@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider"
 import { Search } from "lucide-react"
 import type { Product } from "@/lib/types"
+import Image from "next/image"
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([])
@@ -66,69 +67,78 @@ export default function Home() {
   }, [searchQuery, priceRange, sortBy, products])
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-slate-900 via-blue-900 to-teal-900 tech-pattern relative overflow-hidden">
-      {/* Animated Tech Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Abstract floating shapes */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute top-40 right-20 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute bottom-40 left-1/3 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        />
-        <div
-          className="absolute top-1/2 right-1/4 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "6s" }}
-        />
-        
-        {/* Circuit board lines */}
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
-        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-        
-        {/* Vertical circuit lines */}
-        <div className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent" />
-        <div className="absolute left-1/2 top-0 w-px h-full bg-gradient-to-b from-transparent via-teal-500/20 to-transparent" />
-        <div className="absolute left-3/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent" />
-      </div>
+    <div className="min-h-screen luxury-background royal-pattern relative overflow-hidden">
+      <div className="ornate-overlay" />
+      <div className="golden-ornament floating-gold" style={{ top: "18%", right: "8%" }} />
+      <div className="golden-ornament floating-gold" style={{ bottom: "12%", left: "5%", width: 160, height: 160 }} />
 
-      <header className="glass-card-strong border-b border-blue-500/20 sticky top-0 z-10 relative">
+      <header className="sticky top-0 z-30 bg-black/70 backdrop-blur-2xl border-b border-primary/15">
         <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
-          <div className="flex items-center justify-center flex-col gap-2 sm:gap-3">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-[family-name:var(--font-noto-sans-bengali)] text-center">
-              লিপ জেল শপ
-            </h1>
-            <p className="text-sm sm:text-base md:text-lg text-blue-200 font-medium text-center px-4">Natural Lip Care for Dhaka Winter</p>
-            <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-full"></div>
+          <div className="flex flex-col items-center gap-3 text-center">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="w-20 h-20 flex items-center justify-center bg-black/40 border border-primary/30 rounded-2xl shadow-[0_0_35px_rgba(245,211,140,0.35)]">
+                <Image
+                  src="/shafatain-logo.png"
+                  alt="Shafatain logo"
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div>
+                <p className="golden-text text-xs sm:text-sm uppercase tracking-[0.45em]">Shafatain Atelier</p>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary leading-tight">
+                  Shafatain Lip Atelier
+                </h1>
+                <p className="calligraphic-accent text-lg text-primary/90">شفتين</p>
+              </div>
+            </div>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl">
+              Golden-crafted lip nourishment inspired by contemporary Bengali heritage and Middle Eastern elegance.
+            </p>
+            <div className="gold-divider max-w-md" />
           </div>
         </div>
       </header>
 
       <section className="container mx-auto px-4 py-8 sm:py-12 md:py-16 text-center relative z-10">
-        <div className="glass-card rounded-2xl p-4 sm:p-6 md:p-8 border border-blue-500/20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 text-balance font-[family-name:var(--font-noto-sans-bengali)]">
-            শীতের জন্য প্রিমিয়াম লিপ জেল
+        <div className="ornate-panel glass-card-strong golden-glow p-4 sm:p-8 border border-primary/15">
+          <p className="golden-text text-xs sm:text-sm uppercase tracking-[0.35em]">Heritage Blend • Since 2020</p>
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-primary mt-3 mb-4 sm:mb-6">
+            Shafatain Signature Lip Gel
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-blue-200 max-w-3xl mx-auto text-pretty leading-relaxed px-2">
-            Handcrafted with natural ingredients. Perfect for Dhaka's winter season. Order via WhatsApp for fast delivery.
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A luxurious lip ritual infused with saffron oil, almond butter, and aromatic cardamom. Designed for Dhaka’s winter with a velvet finish and subtle golden sheen.
           </p>
-          <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-blue-300">
-            <span className="flex items-center justify-center gap-1">🌿 100% Natural</span>
-            <span className="flex items-center justify-center gap-1">❄️ Winter Special</span>
-            <span className="flex items-center justify-center gap-1">🚚 Fast Delivery</span>
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3 text-xs sm:text-sm text-primary/80">
+            <span className="flex items-center justify-center gap-2">◈ 24k-inspired Glow</span>
+            <span className="flex items-center justify-center gap-2">◈ Cold-Pressed Botanicals</span>
+            <span className="flex items-center justify-center gap-2">◈ Artisan Small Batches</span>
+          </div>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/8801752304601"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-[#d9a446] to-[#f5d38c] text-black font-semibold tracking-wide shadow-lg hover:opacity-90 transition"
+            >
+              Order on WhatsApp
+            </a>
+            <button className="inline-flex items-center justify-center px-6 py-3 rounded-full glass-card text-primary font-semibold tracking-wide border border-primary/30">
+              Explore Collections
+            </button>
           </div>
         </div>
       </section>
 
       <section className="container mx-auto px-4 pb-6 sm:pb-8 relative z-10">
-        <div className="glass-card-strong rounded-2xl border border-blue-500/20 p-4 sm:p-6 md:p-8 shadow-xl">
+        <div className="ornate-panel glass-card-strong border border-primary/20 p-4 sm:p-6 md:p-8 shadow-2xl">
+          <p className="golden-text text-xs uppercase tracking-[0.35em] mb-4 sm:mb-6">Curate Your Selection</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {/* Search */}
             <div className="space-y-2 sm:space-y-3 sm:col-span-2 lg:col-span-1">
-              <Label htmlFor="search" className="text-xs sm:text-sm font-semibold text-white flex items-center gap-2">
+              <Label htmlFor="search" className="text-xs sm:text-sm font-semibold text-primary flex items-center gap-2">
                 <Search className="h-3 w-3 sm:h-4 sm:w-4" />
                 Search Products
               </Label>
@@ -136,21 +146,21 @@ export default function Home() {
                 <Input
                   id="search"
                   type="text"
-                  placeholder="Search by name or keyword..."
+                  placeholder="Saffron, rose, almond..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="glass-input pl-8 sm:pl-10 h-10 sm:h-12 text-sm sm:text-base text-white placeholder:text-blue-300"
+                  className="glass-input pl-9 sm:pl-11 h-10 sm:h-12 text-sm sm:text-base text-foreground placeholder:text-primary/40"
                 />
-                <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 h-3 w-3 sm:h-4 sm:w-4 text-blue-300" />
+                <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 h-3 w-3 sm:h-4 sm:w-4 text-primary/50" />
               </div>
             </div>
 
             {/* Price Filter */}
             <div className="space-y-2 sm:space-y-3">
-              <Label htmlFor="price-range" className="text-xs sm:text-sm font-semibold text-white">
-                Price Range: ৳{priceRange[0]} - ৳{priceRange[1]}
+              <Label htmlFor="price-range" className="text-xs sm:text-sm font-semibold text-primary">
+                Price Range: BDT {priceRange[0]} - BDT {priceRange[1]}
               </Label>
-              <div className="glass-input rounded-lg p-3 sm:p-4 border border-blue-500/20">
+              <div className="glass-input rounded-lg p-3 sm:p-4 border border-primary/25">
                 <Slider
                   id="price-range"
                   min={0}
@@ -165,14 +175,14 @@ export default function Home() {
 
             {/* Sort */}
             <div className="space-y-2 sm:space-y-3">
-              <Label htmlFor="sort" className="text-xs sm:text-sm font-semibold text-white">
+              <Label htmlFor="sort" className="text-xs sm:text-sm font-semibold text-primary">
                 Sort By
               </Label>
               <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger id="sort" className="glass-input h-10 sm:h-12 text-sm sm:text-base text-white border-blue-500/20">
+                <SelectTrigger id="sort" className="glass-input h-10 sm:h-12 text-sm sm:text-base text-foreground border-primary/30">
                   <SelectValue placeholder="Default" />
                 </SelectTrigger>
-                <SelectContent className="glass-card-strong border border-blue-500/20">
+                <SelectContent className="glass-card-strong border border-primary/20">
                   <SelectItem value="default">Default</SelectItem>
                   <SelectItem value="price-asc">Price: Low → High</SelectItem>
                   <SelectItem value="price-desc">Price: High → Low</SelectItem>
@@ -187,7 +197,7 @@ export default function Home() {
       <section className="container mx-auto px-4 pb-12 sm:pb-16 relative z-10">
         {loading ? (
           <div className="text-center py-8 sm:py-12">
-            <p className="text-blue-300 text-sm sm:text-base">Loading products...</p>
+            <p className="text-primary/70 text-sm sm:text-base">Curating your essentials...</p>
           </div>
         ) : filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
@@ -197,63 +207,74 @@ export default function Home() {
           </div>
         ) : (
           <div className="text-center py-8 sm:py-12">
-            <p className="text-blue-300 text-sm sm:text-base px-4">
+            <p className="text-primary/70 text-sm sm:text-base px-4">
               {searchQuery || priceRange[0] > 0 || priceRange[1] < maxPrice
-                ? "No products match your filters. Try adjusting your search."
-                : "No products available yet. Check back soon!"}
+                ? "No creations match your filters. Adjust and explore again."
+                : "No collections available at the moment. Return soon for fresh blends."}
             </p>
           </div>
         )}
       </section>
 
-      <footer className="glass-card-strong border-t border-blue-500/20 mt-8 sm:mt-12 md:mt-16 relative z-10">
-        <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 text-center sm:text-left">
-            <div className="space-y-3 sm:space-y-4 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 font-[family-name:var(--font-noto-sans-bengali)]">
-                লিপ জেল শপ
-              </h3>
-              <p className="text-sm sm:text-base text-blue-200 leading-relaxed px-4 sm:px-0">
-                Premium lip care products made with natural ingredients for Dhaka's winter season.
-              </p>
-              <div className="flex gap-2 justify-center sm:justify-start">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-              </div>
-            </div>
-            
-            <div className="space-y-3 sm:space-y-4">
-              <h4 className="font-bold text-white text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h4>
-              <div className="space-y-2">
-                <p className="text-sm sm:text-base text-blue-200 flex items-center gap-2 justify-center sm:justify-start">
-                  📱 WhatsApp: +880 1752-304601
+      <footer className="mt-8 sm:mt-12 md:mt-16 relative z-10">
+        <div className="container mx-auto px-4 pb-10">
+          <div className="ornate-panel glass-card-strong border border-primary/20 p-6 sm:p-8 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
+              <div className="space-y-4">
+                <p className="golden-text text-xs uppercase tracking-[0.45em]">Shafatain</p>
+                <h3 className="text-2xl font-bold text-primary">Shafatain Lip Atelier</h3>
+                <p className="text-sm text-muted-foreground">
+                  Premium lip care atelier crafting bespoke blends for Dhaka’s winter evenings.
                 </p>
-                <p className="text-sm sm:text-base text-blue-200 flex items-center gap-2 justify-center sm:justify-start">
+              </div>
+
+              <div className="flex flex-col items-center gap-3">
+                <div className="text-xs uppercase tracking-[0.25em] text-primary/70">Scan &amp; Connect</div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-24 h-24 bg-black/40 border border-primary/25 rounded-lg flex items-center justify-center p-2">
+                      <Image
+                        src="/Shafatain_Website_QR.png"
+                        alt="QR code linking to the Shafatain website"
+                        width={96}
+                        height={96}
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Website</p>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-24 h-24 bg-black/40 border border-primary/25 rounded-lg flex items-center justify-center p-2">
+                      <Image
+                        src="/Shafatain_Facebook_QR.png"
+                        alt="QR code linking to the Shafatain Facebook page"
+                        width={96}
+                        height={96}
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Facebook</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground text-center">Visit our website • Follow us on Facebook</p>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="text-lg font-semibold text-primary">Contact</h4>
+                <p className="text-sm text-primary flex items-center justify-center lg:justify-start gap-2">
+                  📱 +880 1752-304601
+                </p>
+                <p className="text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
                   📍 Dhaka, Bangladesh
                 </p>
-              </div>
-            </div>
-            
-            <div className="space-y-3 sm:space-y-4">
-              <h4 className="font-bold text-white text-base sm:text-lg mb-3 sm:mb-4">Winter Special</h4>
-              <div className="space-y-2 text-sm sm:text-base text-blue-200">
-                <p className="flex items-center gap-2 justify-center sm:justify-start">
-                  ☕ Perfect for cold Dhaka mornings
-                </p>
-                <p className="flex items-center gap-2 justify-center sm:justify-start">
-                  🧣 Keeps your lips soft & moisturized
-                </p>
-                <p className="flex items-center gap-2 justify-center sm:justify-start">
-                  🌿 100% natural ingredients
+                <p className="text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
+                  ✉️ atelier@lipgel.shop
                 </p>
               </div>
             </div>
-          </div>
-          
-          <div className="border-t border-blue-500/20 mt-6 sm:mt-8 md:mt-12 pt-4 sm:pt-6 md:pt-8 text-center">
-            <p className="text-xs sm:text-sm text-blue-300">
-              © 2025 LipGel Shop. Made with ❤️ in Dhaka, Bangladesh.
+            <div className="gold-divider my-8" />
+            <p className="text-center text-xs text-muted-foreground tracking-[0.3em] uppercase">
+              © 2025 Shafatain Lip Atelier • Crafted with devotion in Dhaka
             </p>
           </div>
         </div>

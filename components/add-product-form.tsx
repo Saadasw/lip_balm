@@ -70,12 +70,12 @@ export function AddProductForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="price">Price (৳)</Label>
+            <Label htmlFor="price">Price (BDT)</Label>
             <Input id="price" name="price" type="number" step="0.01" placeholder="350.00" required />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="winter_offer_price">Winter Offer Price (৳) - Optional</Label>
+            <Label htmlFor="winter_offer_price">Winter Offer Price (BDT) - Optional</Label>
             <Input id="winter_offer_price" name="winter_offer_price" type="number" step="0.01" placeholder="299.00" />
             <p className="text-xs text-gray-500">Leave empty if no winter offer</p>
           </div>

@@ -17,9 +17,9 @@ const notoSansBengali = Noto_Sans_Bengali({
 })
 
 export const metadata: Metadata = {
-  title: "Shafatain Lip Atelier - Luxury Lip Care | Dhaka, Bangladesh",
-  description: "Premium lip care blending Bengali heritage with Middle Eastern elegance. Handcrafted with saffron oil, almond butter, and cardamom. Vegan, cruelty-free luxury.",
-  keywords: ["lip balm", "luxury lip care", "saffron oil", "Dhaka", "Bengali beauty", "halal cosmetics", "vegan lip care"],
+  title: "Shafatain Lip Atelier - Premium USA Lip Care Imports | Dhaka, Bangladesh",
+  description: "Authentic premium lip care products imported from USA. Shafatain brings international quality to Bangladesh - saffron oil, almond butter, natural botanicals. 100% authentic, vegan, cruelty-free.",
+  keywords: ["USA lip balm", "imported lip care", "authentic beauty products", "Dhaka cosmetics", "American lip balm Bangladesh", "premium lip care", "vegan lip balm"],
   authors: [{ name: "Shafatain Atelier" }],
   creator: "Shafatain Atelier",
   publisher: "Shafatain Atelier",
@@ -29,21 +29,21 @@ export const metadata: Metadata = {
     locale: "en_BD",
     url: "https://www.shafatain.com",
     siteName: "Shafatain Lip Atelier",
-    title: "Shafatain Lip Atelier - Luxury Lip Care",
-    description: "Premium lip care blending Bengali heritage with Middle Eastern elegance.",
+    title: "Shafatain - Premium USA Lip Care Imports in Dhaka",
+    description: "100% authentic premium lip care products imported from USA. Bringing international quality to Bangladesh.",
     images: [
       {
         url: "/shafatain-logo.png",
         width: 1200,
         height: 630,
-        alt: "Shafatain Lip Atelier",
+        alt: "Shafatain Lip Atelier - USA Imports",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shafatain Lip Atelier - Luxury Lip Care",
-    description: "Premium lip care blending Bengali heritage with Middle Eastern elegance.",
+    title: "Shafatain - Premium USA Lip Care in Dhaka",
+    description: "100% authentic premium lip care products imported from USA to Bangladesh.",
     images: ["/shafatain-logo.png"],
   },
 }
@@ -51,8 +51,10 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: "cover",
+  themeColor: "#d4a574",
 }
 
 export default function RootLayout({
@@ -62,6 +64,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Shafatain" />
+        <link rel="apple-touch-icon" href="/shafatain-logo.png" />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${notoSansBengali.variable}`}>
         <ThemeProvider
           attribute="class"

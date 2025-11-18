@@ -693,3 +693,108 @@ html {
   background-size: 800px 104px;
 }
 
+
+/* ========== MOBILE APP-LIKE OPTIMIZATIONS ========== */
+
+/* Safe Area Support for iPhone notch, home indicator */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Mobile Touch Optimizations */
+@media (max-width: 1024px) {
+  /* Remove hover effects on touch devices */
+  @media (hover: none) {
+    .hover\:scale-110:hover, .hover\:-translate-y-2:hover {
+      transform: none;
+    }
+  }
+
+  /* Enable hardware acceleration */
+  .premium-card, .glass-card, .glass-card-strong {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Prevent zoom on double-tap */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+}
+
+/* App-like Page Transitions */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-transition {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* Mobile Bottom Navigation Shadow */
+@media (max-width: 1024px) {
+  nav[class*="bottom"] {
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Swipeable Card Styles */
+.swipeable-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.swipeable-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.swipeable-cards > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Mobile Compact Spacing */
+@media (max-width: 640px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* iOS-style Bounce Scroll */
+@supports (-webkit-touch-callout: none) {
+  body {
+    overscroll-behavior-y: contain;
+  }
+}

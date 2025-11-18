@@ -53,14 +53,14 @@ export function IngredientsSection() {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="text-foreground">Nature's Finest</span>
+            <span className="text-foreground">Premium</span>
             <br />
-            <span className="gradient-text">Botanicals</span>
+            <span className="gradient-text">Formulations</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Each ingredient is carefully selected and cold-pressed to preserve its natural potency and
-            luxurious benefits.
+            Our curated USA products feature nature's finest ingredients, expertly formulated for luxurious
+            lip care and proven results.
           </p>
         </div>
 
@@ -102,9 +102,9 @@ export function IngredientsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 premium-card p-8 rounded-2xl max-w-3xl mx-auto border border-primary/30">
-          <p className="text-xl font-semibold text-primary mb-2">100% Natural • Vegan • Cruelty-Free</p>
+          <p className="text-xl font-semibold text-primary mb-2">100% Authentic USA Products • Vegan • Cruelty-Free</p>
           <p className="text-muted-foreground">
-            No parabens, sulfates, or synthetic fragrances. Just pure botanical luxury.
+            Premium formulations from trusted American brands, carefully selected for quality and luxury.
           </p>
         </div>
       </div>

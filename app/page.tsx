@@ -2,14 +2,22 @@
 
 import { useEffect, useState } from "react"
 import { createClient } from "@/lib/supabase/client"
-import { ProductCard } from "@/components/product-card"
+import { Navigation } from "@/components/navigation"
+import { HeroSection } from "@/components/hero-section"
+import { BrandStory } from "@/components/brand-story"
+import { IngredientsSection } from "@/components/ingredients-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { NewsletterSection } from "@/components/newsletter-section"
+import { WelcomePopup } from "@/components/welcome-popup"
+import { EnhancedProductCard } from "@/components/enhanced-product-card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
-import { Search } from "lucide-react"
+import { Search, SlidersHorizontal } from "lucide-react"
 import type { Product } from "@/lib/types"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([])
@@ -67,218 +75,243 @@ export default function Home() {
   }, [searchQuery, priceRange, sortBy, products])
 
   return (
-    <div className="min-h-screen luxury-background royal-pattern relative overflow-hidden">
-      <div className="ornate-overlay" />
-      <div className="golden-ornament floating-gold" style={{ top: "18%", right: "8%" }} />
-      <div className="golden-ornament floating-gold" style={{ bottom: "12%", left: "5%", width: 160, height: 160 }} />
+    <div className="min-h-screen luxury-background relative overflow-hidden">
+      {/* Navigation */}
+      <Navigation />
 
-      <header className="sticky top-0 z-30 bg-black/70 backdrop-blur-2xl border-b border-primary/15">
-        <div className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
-          <div className="flex flex-col items-center gap-3 text-center">
-            <div className="flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-28 h-28 flex items-center justify-center bg-black/40 border border-primary/30 rounded-3xl shadow-[0_0_45px_rgba(245,211,140,0.45)]">
-                <Image
-                  src="/shafatain-logo.png"
-                  alt="Shafatain logo"
-                  width={140}
-                  height={140}
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <div>
-                <p className="golden-text text-xs sm:text-sm uppercase tracking-[0.45em]">Shafatain Atelier</p>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary leading-tight">
-                  Shafatain Lip Atelier
-                </h1>
-                <p className="calligraphic-accent text-lg text-primary/90">شفتين</p>
-              </div>
-            </div>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl">
-              Golden-crafted lip nourishment inspired by contemporary Bengali heritage and Middle Eastern elegance.
-            </p>
-            <div className="gold-divider max-w-md" />
-          </div>
-        </div>
-      </header>
+      {/* Hero Section */}
+      <HeroSection />
 
-      <section className="container mx-auto px-4 py-8 sm:py-12 md:py-16 text-center relative z-10">
-        <div className="ornate-panel glass-card-strong golden-glow p-4 sm:p-8 border border-primary/15">
-          <p className="golden-text text-xs sm:text-sm uppercase tracking-[0.35em]">Heritage Blend • Since 2020</p>
-          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-primary mt-3 mb-4 sm:mb-6">
-            Shafatain Signature Lip Gel
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A luxurious lip ritual infused with saffron oil, almond butter, and aromatic cardamom. Designed for Dhaka’s winter with a velvet finish and subtle golden sheen.
-          </p>
-          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3 text-xs sm:text-sm text-primary/80">
-            <span className="flex items-center justify-center gap-2">◈ 24k-inspired Glow</span>
-            <span className="flex items-center justify-center gap-2">◈ Cold-Pressed Botanicals</span>
-            <span className="flex items-center justify-center gap-2">◈ Artisan Small Batches</span>
-          </div>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://wa.me/8801752304601"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-[#d9a446] to-[#f5d38c] text-black font-semibold tracking-wide shadow-lg hover:opacity-90 transition"
-            >
-              Order on WhatsApp
-            </a>
-            <button className="inline-flex items-center justify-center px-6 py-3 rounded-full glass-card text-primary font-semibold tracking-wide border border-primary/30">
-              Explore Collections
-            </button>
-          </div>
-        </div>
-      </section>
+      {/* Brand Story */}
+      <BrandStory />
 
-      <section className="container mx-auto px-4 pb-6 sm:pb-8 relative z-10">
-        <div className="ornate-panel glass-card-strong border border-primary/20 p-4 sm:p-6 md:p-8 shadow-2xl">
-          <p className="golden-text text-xs uppercase tracking-[0.35em] mb-4 sm:mb-6">Curate Your Selection</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {/* Search */}
-            <div className="space-y-2 sm:space-y-3 sm:col-span-2 lg:col-span-1">
-              <Label htmlFor="search" className="text-xs sm:text-sm font-semibold text-primary flex items-center gap-2">
-                <Search className="h-3 w-3 sm:h-4 sm:w-4" />
-                Search Products
-              </Label>
-              <div className="relative">
-                <Input
-                  id="search"
-                  type="text"
-                  placeholder="Saffron, rose, almond..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="glass-input pl-9 sm:pl-11 h-10 sm:h-12 text-sm sm:text-base text-foreground placeholder:text-primary/40"
-                />
-                <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 h-3 w-3 sm:h-4 sm:w-4 text-primary/50" />
-              </div>
+      {/* Ingredients */}
+      <IngredientsSection />
+
+      {/* Products Section */}
+      <section id="products" className="py-20 md:py-32 relative overflow-hidden royal-pattern">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center space-y-4 mb-12 fade-in-up">
+            <div className="flex items-center justify-center gap-2 text-primary/80">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
+              <span className="text-sm uppercase tracking-[0.3em] font-medium">Our Collection</span>
+              <div className="h-px w-12 bg-gradient-to-r from-primary via-primary to-transparent" />
             </div>
 
-            {/* Price Filter */}
-            <div className="space-y-2 sm:space-y-3">
-              <Label htmlFor="price-range" className="text-xs sm:text-sm font-semibold text-primary">
-                Price Range: BDT {priceRange[0]} - BDT {priceRange[1]}
-              </Label>
-              <div className="glass-input rounded-lg p-3 sm:p-4 border border-primary/25">
-                <Slider
-                  id="price-range"
-                  min={0}
-                  max={maxPrice}
-                  step={10}
-                  value={priceRange}
-                  onValueChange={setPriceRange}
-                  className="w-full"
-                />
-              </div>
-            </div>
-
-            {/* Sort */}
-            <div className="space-y-2 sm:space-y-3">
-              <Label htmlFor="sort" className="text-xs sm:text-sm font-semibold text-primary">
-                Sort By
-              </Label>
-              <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger id="sort" className="glass-input h-10 sm:h-12 text-sm sm:text-base text-foreground border-primary/30">
-                  <SelectValue placeholder="Default" />
-                </SelectTrigger>
-                <SelectContent className="glass-card-strong border border-primary/20">
-                  <SelectItem value="default">Default</SelectItem>
-                  <SelectItem value="price-asc">Price: Low → High</SelectItem>
-                  <SelectItem value="price-desc">Price: High → Low</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              <span className="gradient-text">Discover</span>
+              <br />
+              <span className="text-foreground">Luxury Lip Care</span>
+            </h2>
           </div>
-        </div>
-      </section>
 
-      {/* Products Grid */}
-      <section className="container mx-auto px-4 pb-12 sm:pb-16 relative z-10">
-        {loading ? (
-          <div className="text-center py-8 sm:py-12">
-            <p className="text-primary/70 text-sm sm:text-base">Curating your essentials...</p>
-          </div>
-        ) : filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {filteredProducts.map((product: Product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-8 sm:py-12">
-            <p className="text-primary/70 text-sm sm:text-base px-4">
-              {searchQuery || priceRange[0] > 0 || priceRange[1] < maxPrice
-                ? "No creations match your filters. Adjust and explore again."
-                : "No collections available at the moment. Return soon for fresh blends."}
-            </p>
-          </div>
-        )}
-      </section>
-
-      <footer className="mt-8 sm:mt-12 md:mt-16 relative z-10">
-        <div className="container mx-auto px-4 pb-10">
-          <div className="ornate-panel glass-card-strong border border-primary/20 p-6 sm:p-8 md:p-10">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
-              <div className="space-y-4">
-                <p className="golden-text text-xs uppercase tracking-[0.45em]">Shafatain</p>
-                <h3 className="text-2xl font-bold text-primary">Shafatain Lip Atelier</h3>
-                <p className="text-sm text-muted-foreground">
-                  Premium lip care atelier crafting bespoke blends for Dhaka’s winter evenings.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center gap-3">
-                <div className="text-xs uppercase tracking-[0.25em] text-primary/70">Scan &amp; Connect</div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-24 h-24 bg-black/40 border border-primary/25 rounded-lg flex items-center justify-center p-2">
-                      <Image
-                        src="/Shafatain_Website_QR.png"
-                        alt="QR code linking to the Shafatain website"
-                        width={96}
-                        height={96}
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Website</p>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-24 h-24 bg-black/40 border border-primary/25 rounded-lg flex items-center justify-center p-2">
-                      <Image
-                        src="/Shafatain_Facebook_QR.png"
-                        alt="QR code linking to the Shafatain Facebook page"
-                        width={96}
-                        height={96}
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Facebook</p>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground text-center">Visit our website • Follow us on Facebook</p>
-              </div>
-
+          {/* Filters */}
+          <div className="premium-card p-6 md:p-8 rounded-2xl mb-12 border border-primary/30">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Search */}
               <div className="space-y-3">
-                <h4 className="text-lg font-semibold text-primary">Contact</h4>
-                <p className="text-sm text-primary flex items-center justify-center lg:justify-start gap-2">
-                  📱 +880 1752-304601
-                </p>
-                <p className="text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
-                  📍 Dhaka, Bangladesh
-                </p>
-                <p className="text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-2">
-                  ✉️ atelier@lipgel.shop
-                </p>
+                <Label htmlFor="search" className="text-sm font-semibold text-primary flex items-center gap-2">
+                  <Search className="h-4 w-4" />
+                  Search Products
+                </Label>
+                <div className="relative">
+                  <Input
+                    id="search"
+                    type="text"
+                    placeholder="Saffron, rose, almond..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="glass-input pl-11 h-12 text-foreground placeholder:text-primary/40 border-primary/30"
+                  />
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-primary/50" />
+                </div>
+              </div>
+
+              {/* Price Filter */}
+              <div className="space-y-3">
+                <Label htmlFor="price-range" className="text-sm font-semibold text-primary flex items-center gap-2">
+                  <SlidersHorizontal className="h-4 w-4" />
+                  Price: BDT {priceRange[0]} - {priceRange[1]}
+                </Label>
+                <div className="glass-input rounded-lg p-4 border border-primary/25">
+                  <Slider
+                    id="price-range"
+                    min={0}
+                    max={maxPrice}
+                    step={10}
+                    value={priceRange}
+                    onValueChange={setPriceRange}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+
+              {/* Sort */}
+              <div className="space-y-3">
+                <Label htmlFor="sort" className="text-sm font-semibold text-primary">
+                  Sort By
+                </Label>
+                <Select value={sortBy} onValueChange={setSortBy}>
+                  <SelectTrigger id="sort" className="glass-input h-12 text-foreground border-primary/30">
+                    <SelectValue placeholder="Default" />
+                  </SelectTrigger>
+                  <SelectContent className="premium-card border border-primary/20">
+                    <SelectItem value="default">Default</SelectItem>
+                    <SelectItem value="price-asc">Price: Low to High</SelectItem>
+                    <SelectItem value="price-desc">Price: High to Low</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
-            <div className="gold-divider my-8" />
-            <p className="text-center text-xs text-muted-foreground tracking-[0.3em] uppercase">
-              © 2025 Shafatain Lip Atelier • Crafted with devotion in Dhaka
+          </div>
+
+          {/* Products Grid */}
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="loading-shimmer w-32 h-32 rounded-full mx-auto mb-4" />
+              <p className="text-primary/70">Curating your collection...</p>
+            </div>
+          ) : filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredProducts.map((product: Product) => (
+                <EnhancedProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 premium-card p-8 rounded-2xl">
+              <p className="text-primary/70 text-lg">
+                {searchQuery || priceRange[0] > 0 || priceRange[1] < maxPrice
+                  ? "No products match your filters. Try adjusting your search."
+                  : "No products available at the moment. Check back soon!"}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      {/* Newsletter */}
+      <NewsletterSection />
+
+      {/* Footer */}
+      <footer className="py-16 relative z-10 border-t border-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Brand */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 rounded-2xl">
+                  <Image
+                    src="/shafatain-logo.png"
+                    alt="Shafatain logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-primary/70">Shafatain</p>
+                  <p className="font-bold text-primary">Lip Atelier</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Premium lip care blending Bengali heritage with Middle Eastern elegance.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-primary">Quick Links</h4>
+              <div className="flex flex-col gap-2 text-sm">
+                <a href="#products" className="text-muted-foreground hover:text-primary transition-colors">
+                  Products
+                </a>
+                <a href="#story" className="text-muted-foreground hover:text-primary transition-colors">
+                  Our Story
+                </a>
+                <a href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </a>
+                <a href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </div>
+            </div>
+
+            {/* Customer Care */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-primary">Customer Care</h4>
+              <div className="flex flex-col gap-2 text-sm">
+                <a href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
+                  FAQ
+                </a>
+                <a href="/shipping" className="text-muted-foreground hover:text-primary transition-colors">
+                  Shipping & Returns
+                </a>
+                <a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
+                </a>
+                <a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  Terms of Service
+                </a>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-primary">Contact</h4>
+              <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                <a href="tel:+8801752304601" className="hover:text-primary transition-colors">
+                  +880 1752-304601
+                </a>
+                <a href="mailto:atelier@lipgel.shop" className="hover:text-primary transition-colors">
+                  atelier@lipgel.shop
+                </a>
+                <p>Dhaka, Bangladesh</p>
+              </div>
+
+              {/* Social QR Codes */}
+              <div className="flex gap-3 pt-2">
+                <div className="w-16 h-16 bg-background/60 border border-primary/25 rounded-lg flex items-center justify-center p-1">
+                  <Image
+                    src="/Shafatain_Website_QR.png"
+                    alt="Website QR"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-16 h-16 bg-background/60 border border-primary/25 rounded-lg flex items-center justify-center p-1">
+                  <Image
+                    src="/Shafatain_Facebook_QR.png"
+                    alt="Facebook QR"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="luxury-divider mb-8" />
+
+          <div className="text-center space-y-2">
+            <p className="text-sm text-muted-foreground">
+              © 2025 Shafatain Lip Atelier. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground/70">
+              Crafted with ❤️ in Dhaka, Bangladesh
             </p>
           </div>
         </div>
       </footer>
+
+      {/* Welcome Popup */}
+      <WelcomePopup />
     </div>
   )
 }

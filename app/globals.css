@@ -1,48 +1,63 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Luxurious Black & Gold Palette */
+/* Luxurious Premium Palette - Bengali Heritage meets Middle Eastern Elegance */
 :root {
-  --background: #050505;
-  --foreground: #f9d88a;
-  --card: rgba(15, 15, 20, 0.92);
+  --background: #0a0806;
+  --foreground: #f9f5f0;
+  --card: rgba(20, 16, 14, 0.95);
   --card-foreground: #ffe8ae;
-  --popover: rgba(10, 10, 15, 0.95);
+  --popover: rgba(15, 12, 10, 0.98);
   --popover-foreground: #ffe5a1;
 
-  --primary: #f7c96a; /* rich brushed gold */
-  --primary-foreground: #120f08;
-  --secondary: rgba(96, 74, 46, 0.65); /* bronze glass */
-  --secondary-foreground: #f7c96a;
+  /* Gold Tones */
+  --primary: #d4a574; /* warm gold */
+  --primary-foreground: #0a0806;
+  --gold-light: #f5d38c;
+  --gold-rich: #c9a05d;
+  --rose-gold: #e8b4a0;
 
-  --muted: rgba(30, 24, 18, 0.85);
-  --muted-foreground: rgba(247, 201, 106, 0.8);
-  --accent: #d8b35e;
-  --accent-foreground: #f7c96a;
+  /* Burgundy & Rich Tones */
+  --burgundy: #6b2e2e;
+  --burgundy-light: #8b4545;
+  --burgundy-dark: #4a1f1f;
 
-  --destructive: #7a2d28;
+  /* Cream & Neutrals */
+  --cream: #f5f0e8;
+  --cream-dark: #e8dfd0;
+  --neutral-warm: #d4c4b0;
+
+  --secondary: rgba(107, 46, 46, 0.75); /* burgundy glass */
+  --secondary-foreground: #f5f0e8;
+
+  --muted: rgba(40, 32, 28, 0.85);
+  --muted-foreground: rgba(212, 165, 116, 0.9);
+  --accent: #e8b4a0;
+  --accent-foreground: #0a0806;
+
+  --destructive: #8b4545;
   --destructive-foreground: #ffe2c9;
 
-  --border: rgba(245, 211, 140, 0.25);
-  --input: rgba(20, 20, 26, 0.85);
-  --ring: rgba(245, 211, 140, 0.6);
+  --border: rgba(212, 165, 116, 0.3);
+  --input: rgba(25, 20, 18, 0.9);
+  --ring: rgba(212, 165, 116, 0.6);
 
-  --chart-1: #f5d38c;
-  --chart-2: #d9a446;
-  --chart-3: #b1752f;
-  --chart-4: #8b5a2b;
-  --chart-5: #fef3c7;
+  --chart-1: #d4a574;
+  --chart-2: #e8b4a0;
+  --chart-3: #6b2e2e;
+  --chart-4: #f5d38c;
+  --chart-5: #f5f0e8;
 
-  --radius: 1.25rem;
+  --radius: 1rem;
 
-  --sidebar: rgba(12, 12, 18, 0.9);
-  --sidebar-foreground: #fdf8e3;
-  --sidebar-primary: #f5d38c;
-  --sidebar-primary-foreground: #0c0a06;
-  --sidebar-accent: rgba(96, 74, 46, 0.65);
-  --sidebar-accent-foreground: #fdf8e3;
-  --sidebar-border: rgba(245, 211, 140, 0.2);
-  --sidebar-ring: rgba(245, 211, 140, 0.6);
+  --sidebar: rgba(15, 12, 10, 0.95);
+  --sidebar-foreground: #f5f0e8;
+  --sidebar-primary: #d4a574;
+  --sidebar-primary-foreground: #0a0806;
+  --sidebar-accent: rgba(107, 46, 46, 0.7);
+  --sidebar-accent-foreground: #f5f0e8;
+  --sidebar-border: rgba(212, 165, 116, 0.25);
+  --sidebar-ring: rgba(212, 165, 116, 0.6);
 }
 
 .dark {
@@ -203,11 +218,13 @@
   box-shadow: inset 0 1px 0 rgba(255, 233, 186, 0.2);
 }
 
-/* Ornamental Background */
+/* Ornamental Background - Enhanced Luxury */
 .luxury-background {
-  background: radial-gradient(circle at top, rgba(245, 211, 140, 0.05), transparent 50%),
-    radial-gradient(circle at bottom, rgba(139, 93, 38, 0.08), transparent 60%),
-    #050505;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(212, 165, 116, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(107, 46, 46, 0.06), transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(232, 180, 160, 0.05), transparent 60%),
+    linear-gradient(135deg, #0a0806 0%, #120e0c 50%, #0a0806 100%);
   color: var(--foreground);
 }
 
@@ -349,5 +366,330 @@
   box-shadow:
     0 0 25px rgba(245, 211, 140, 0.25),
     0 0 80px rgba(245, 211, 140, 0.15);
+}
+
+/* ========== ENHANCED LUXURY STYLES ========== */
+
+/* Islamic Geometric Patterns */
+.islamic-pattern {
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 165, 116, 0.03) 35px, rgba(212, 165, 116, 0.03) 70px),
+    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(232, 180, 160, 0.02) 35px, rgba(232, 180, 160, 0.02) 70px);
+}
+
+.moroccan-pattern {
+  background-image:
+    radial-gradient(circle at 0% 50%, rgba(212, 165, 116, 0.04) 10%, transparent 10%),
+    radial-gradient(circle at 100% 50%, rgba(212, 165, 116, 0.04) 10%, transparent 10%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.bengali-motif {
+  background-image:
+    repeating-radial-gradient(circle at 25% 25%, transparent 0, transparent 15px, rgba(212, 165, 116, 0.02) 15px, rgba(212, 165, 116, 0.02) 20px);
+  background-size: 80px 80px;
+}
+
+/* Premium Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 8s infinite linear;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 165, 116, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-in {
+  animation: scale-in 0.5s ease-out;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 165, 116, 0.3), 0 0 40px rgba(212, 165, 116, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 165, 116, 0.5), 0 0 60px rgba(212, 165, 116, 0.2);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Luxury Dividers */
+.luxury-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 165, 116, 0.3) 20%,
+    rgba(212, 165, 116, 0.8) 50%,
+    rgba(212, 165, 116, 0.3) 80%,
+    transparent
+  );
+  position: relative;
+}
+
+.luxury-divider::before {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background);
+  padding: 0 1rem;
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+/* Premium Cards */
+.premium-card {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 16, 14, 0.95) 0%,
+    rgba(25, 20, 18, 0.9) 100%
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(212, 165, 116, 0.2),
+    0 0 0 1px rgba(107, 46, 46, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 165, 116, 0.1),
+    transparent
+  );
+  transition: left 0.7s;
+}
+
+.premium-card:hover::before {
+  left: 100%;
+}
+
+/* Ornate Borders */
+.ornate-border {
+  position: relative;
+  padding: 2rem;
+}
+
+.ornate-border::before,
+.ornate-border::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary);
+  opacity: 0.4;
+}
+
+.ornate-border::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 12px;
+}
+
+.ornate-border::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 12px;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--rose-gold) 50%,
+    var(--gold-light) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Overlays */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 8, 6, 0.95) 0%,
+    rgba(10, 8, 6, 0.7) 50%,
+    rgba(10, 8, 6, 0.95) 100%
+  );
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 8, 6, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--rose-gold));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(212, 165, 116, 0.3);
+  color: var(--cream);
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Button Hover Effects */
+.luxury-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.luxury-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.luxury-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Product Card Enhancements */
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.product-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 8, 6, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.product-image-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* Loading Shimmer Effect */
+@keyframes loading-shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.loading-shimmer {
+  animation: loading-shimmer 1.5s ease-in-out infinite;
+  background: linear-gradient(
+    to right,
+    rgba(212, 165, 116, 0.05) 0%,
+    rgba(212, 165, 116, 0.15) 50%,
+    rgba(212, 165, 116, 0.05) 100%
+  );
+  background-size: 800px 104px;
 }
 

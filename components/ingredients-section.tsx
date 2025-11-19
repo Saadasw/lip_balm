@@ -1,45 +1,45 @@
 "use client"
 
-import { Leaf, Sparkles, Droplet, Heart } from "lucide-react"
+import { Package, Shield, Star, Truck } from "lucide-react"
 
 export function IngredientsSection() {
-  const ingredients = [
+  const offerings = [
     {
-      name: "Saffron Oil",
-      icon: Sparkles,
-      benefit: "24k Golden Glow",
+      name: "Hydrating Lip Balms",
+      icon: Package,
+      benefit: "Daily Essential Care",
       description:
-        "Precious saffron threads infused in oil deliver natural radiance and antioxidant protection.",
+        "Premium moisturizing balms from top USA brands. Perfect for everyday hydration with long-lasting nourishment and protection.",
       color: "from-primary to-gold-light",
     },
     {
-      name: "Almond Butter",
-      icon: Heart,
-      benefit: "Deep Nourishment",
+      name: "Tinted & Flavored",
+      icon: Star,
+      benefit: "Beauty Meets Care",
       description:
-        "Rich in vitamins E and B, almond butter provides intensive moisture and healing properties.",
+        "Luxurious tinted balms and flavored formulas from America's favorite brands. Add a pop of color while keeping lips soft and healthy.",
       color: "from-rose-gold to-neutral-warm",
     },
     {
-      name: "Cardamom Extract",
-      icon: Leaf,
-      benefit: "Aromatic Bliss",
+      name: "SPF Protection",
+      icon: Shield,
+      benefit: "Sun Defense",
       description:
-        "A signature Middle Eastern spice that soothes, refreshes, and imparts a subtle warmth.",
+        "Dermatologist-recommended SPF lip care imported from USA. Protect your lips from harmful UV rays while staying moisturized.",
       color: "from-burgundy-light to-primary",
     },
     {
-      name: "Shea Butter",
-      icon: Droplet,
-      benefit: "Long-Lasting Moisture",
+      name: "Specialty Treatments",
+      icon: Truck,
+      benefit: "Advanced Solutions",
       description:
-        "Ultra-moisturizing African shea butter locks in hydration for soft, supple lips all day.",
+        "Therapeutic and overnight repair balms from premium American brands. Intensive care for extremely dry or damaged lips.",
       color: "from-cream-dark to-rose-gold",
     },
   ]
 
   return (
-    <section id="ingredients" className="py-20 md:py-32 relative overflow-hidden">
+    <section id="products-categories" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 islamic-pattern opacity-30" />
 
@@ -48,36 +48,35 @@ export function IngredientsSection() {
         <div className="text-center space-y-4 mb-16 fade-in-up">
           <div className="flex items-center justify-center gap-2 text-primary/80">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
-            <span className="text-sm uppercase tracking-[0.3em] font-medium">Pure Ingredients</span>
+            <span className="text-sm uppercase tracking-[0.3em] font-medium">Product Range</span>
             <div className="h-px w-12 bg-gradient-to-r from-primary via-primary to-transparent" />
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="text-foreground">Premium</span>
+            <span className="text-foreground">What We</span>
             <br />
-            <span className="gradient-text">Formulations</span>
+            <span className="gradient-text">Import for You</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our curated USA products feature nature's finest ingredients, expertly formulated for luxurious
-            lip care and proven results.
+            We carefully select and import premium lip care from America's most trusted brands, bringing you authentic quality and proven results.
           </p>
         </div>
 
-        {/* Ingredients Grid */}
+        {/* Categories Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {ingredients.map((ingredient, index) => {
-            const Icon = ingredient.icon
+          {offerings.map((offering, index) => {
+            const Icon = offering.icon
             return (
               <div
-                key={ingredient.name}
+                key={offering.name}
                 className="premium-card p-8 rounded-2xl hover:-translate-y-2 transition-all duration-500 group scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-6">
                   {/* Icon */}
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${ingredient.color} flex items-center justify-center flex-shrink-0 glow-pulse`}
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${offering.color} flex items-center justify-center flex-shrink-0 glow-pulse`}
                   >
                     <Icon className="h-8 w-8 text-cream" />
                   </div>
@@ -85,11 +84,11 @@ export function IngredientsSection() {
                   {/* Content */}
                   <div className="flex-1 space-y-3">
                     <div>
-                      <h3 className="text-2xl font-bold text-primary mb-1">{ingredient.name}</h3>
-                      <p className="text-sm text-rose-gold font-medium">{ingredient.benefit}</p>
+                      <h3 className="text-2xl font-bold text-primary mb-1">{offering.name}</h3>
+                      <p className="text-sm text-rose-gold font-medium">{offering.benefit}</p>
                     </div>
 
-                    <p className="text-muted-foreground leading-relaxed">{ingredient.description}</p>
+                    <p className="text-muted-foreground leading-relaxed">{offering.description}</p>
 
                     {/* Decorative Element */}
                     <div className="h-px bg-gradient-to-r from-primary/50 to-transparent w-24" />
@@ -102,9 +101,9 @@ export function IngredientsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 premium-card p-8 rounded-2xl max-w-3xl mx-auto border border-primary/30">
-          <p className="text-xl font-semibold text-primary mb-2">100% Authentic USA Products • Vegan • Cruelty-Free</p>
+          <p className="text-xl font-semibold text-primary mb-2">Imported from Top USA Brands • 100% Authentic • Quality Guaranteed</p>
           <p className="text-muted-foreground">
-            Premium formulations from trusted American brands, carefully selected for quality and luxury.
+            From household names to specialty brands, we bring you the best lip care America has to offer—verified, authentic, and delivered to your door in Dhaka.
           </p>
         </div>
       </div>

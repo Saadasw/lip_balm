@@ -12,20 +12,20 @@ export default function FAQPage() {
       category: "Product Information",
       questions: [
         {
-          q: "What makes Shafatain lip care products unique?",
-          a: "Our products blend Bengali heritage with Middle Eastern elegance, featuring premium ingredients like saffron oil, almond butter, and cardamom. Each product is handcrafted in small batches to ensure the highest quality and attention to detail.",
+          q: "What makes Shafatain unique?",
+          a: "We import only premium, authentic lip care products from America's most trusted brands. Every product is carefully selected for quality, effectiveness, and safety. We verify authenticity at every step and ensure proper storage to maintain product integrity.",
         },
         {
-          q: "Are your products vegan and cruelty-free?",
-          a: "Yes! All Shafatain products are 100% vegan and cruelty-free. We never test on animals and use only plant-based ingredients sourced ethically and sustainably.",
+          q: "Are the products you sell vegan and cruelty-free?",
+          a: "Yes! We specifically curate and import brands that are 100% vegan and cruelty-free. All products we offer are from manufacturers who never test on animals and use ethically-sourced, plant-based ingredients.",
         },
         {
-          q: "What ingredients do you use?",
-          a: "Our signature ingredients include saffron oil for golden glow, almond butter for deep nourishment, cardamom extract for aromatic freshness, and shea butter for long-lasting moisture. All ingredients are cold-pressed to preserve their natural potency.",
+          q: "What types of lip care do you import?",
+          a: "We import a wide range including hydrating balms, tinted lip care, SPF protection, flavored formulas, and specialty treatments. Our selection features premium ingredients like natural oils, butters, and botanical extracts from top USA brands.",
         },
         {
-          q: "How long do your products last?",
-          a: "When stored properly in a cool, dry place, our lip balms have a shelf life of 12-18 months. We recommend using within 6 months of opening for optimal freshness and efficacy.",
+          q: "How long do the products last?",
+          a: "Most lip balms imported from USA brands have a shelf life of 12-24 months when stored properly in a cool, dry place. Each product comes with its original manufacturing date and expiration information. We recommend using within 6-12 months of opening.",
         },
       ],
     },

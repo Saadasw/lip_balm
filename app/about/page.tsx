@@ -20,7 +20,7 @@ export default function AboutPage() {
               <span className="gradient-text">Shafatain Atelier</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Where Bengali heritage meets Middle Eastern elegance in every luxurious drop of lip care.
+              Bringing America's finest lip care to Bangladesh with Bengali warmth and Middle Eastern elegance.
             </p>
             <div className="calligraphic-accent text-4xl text-primary">شفتين</div>
           </div>
@@ -36,18 +36,19 @@ export default function AboutPage() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Founded in 2020 in the vibrant heart of Dhaka, Shafatain Atelier was born from a simple yet
-                  profound vision: to create lip care that honors tradition while embracing modern luxury.
+                  profound vision: to bring America's finest lip care products to Bangladesh, making premium
+                  quality accessible to beauty enthusiasts across the country.
                 </p>
                 <p>
                   Our name, "Shafatain" (شفتين), meaning "lips" in Arabic, reflects our commitment to
-                  celebrating the beautiful fusion of Bengali warmth and Middle Eastern sophistication. Each
-                  product is a testament to the ancient beauty rituals passed down through generations,
-                  reimagined for today's discerning customer.
+                  celebrating the beautiful fusion of Bengali warmth and Middle Eastern sophistication. We
+                  carefully curate and import each product, ensuring authentic quality and proven excellence
+                  from trusted USA brands.
                 </p>
                 <p>
-                  We believe that luxury should be accessible, sustainable, and deeply rooted in cultural
-                  heritage. Every jar we craft tells a story of artisanal dedication, natural ingredients, and
-                  the timeless pursuit of beauty.
+                  We believe that luxury should be accessible, authentic, and rooted in trust. Every product we
+                  import tells a story of careful selection, rigorous quality checks, and our dedication to
+                  bringing you the very best in lip care.
                 </p>
               </div>
             </div>
@@ -78,26 +79,26 @@ export default function AboutPage() {
             {[
               {
                 icon: Sparkles,
-                title: "Quality First",
-                description: "Only the finest natural ingredients make it into our products",
+                title: "Authentic Quality",
+                description: "100% authentic products imported directly from USA brands",
                 color: "from-primary to-gold-light",
               },
               {
                 icon: Heart,
-                title: "Ethical & Vegan",
-                description: "Cruelty-free, vegan formulations that respect all life",
+                title: "Carefully Curated",
+                description: "Every product hand-selected for quality, safety, and luxury",
                 color: "from-rose-gold to-neutral-warm",
               },
               {
                 icon: Leaf,
-                title: "Sustainability",
-                description: "Eco-conscious practices from sourcing to packaging",
+                title: "Trusted Brands",
+                description: "Partnering with America's most respected lip care manufacturers",
                 color: "from-burgundy-light to-primary",
               },
               {
                 icon: Users,
-                title: "Community",
-                description: "Building relationships and celebrating shared beauty traditions",
+                title: "Customer First",
+                description: "Building trust through authenticity and exceptional service",
                 color: "from-cream-dark to-rose-gold",
               },
             ].map((value) => {
@@ -123,19 +124,19 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold gradient-text">Our Commitment to You</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Every product from Shafatain Atelier is handcrafted in small batches to ensure unparalleled
-                quality and attention to detail. We source our ingredients ethically, prioritizing fair trade
-                and sustainable practices.
+                Every product at Shafatain Atelier is carefully selected from premium USA brands known for their
+                commitment to quality and natural ingredients. We verify authenticity at every step and ensure
+                proper storage and handling to maintain product integrity.
               </p>
               <p>
-                Our commitment extends beyond creating beautiful products—we're dedicated to celebrating and
-                preserving the rich beauty traditions of Bengali and Middle Eastern cultures while making them
-                accessible to modern beauty enthusiasts.
+                Our commitment extends beyond importing products—we're dedicated to educating our customers about
+                quality lip care, building a trusted community of beauty enthusiasts, and making international
+                luxury accessible right here in Bangladesh.
               </p>
             </div>
             <div className="luxury-divider" />
             <p className="text-xl font-semibold text-primary italic">
-              "Beauty is a bridge between cultures, a celebration of heritage, and a journey of self-love."
+              "Bringing the world's best to Bangladesh—where authenticity meets elegance."
             </p>
           </div>
         </div>

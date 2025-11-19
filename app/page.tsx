@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { createClient } from "@/lib/supabase/client"
 import { Navigation } from "@/components/navigation"
+import { MobileBottomNav } from "@/components/mobile-bottom-nav"
 import { HeroSection } from "@/components/hero-section"
 import { BrandStory } from "@/components/brand-story"
 import { IngredientsSection } from "@/components/ingredients-section"
@@ -218,7 +219,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Premium lip care blending Bengali heritage with Middle Eastern elegance.
+                Importing premium USA lip care to Bangladesh with authentic quality guaranteed.
               </p>
             </div>
 
@@ -304,7 +305,7 @@ export default function Home() {
               © 2025 Shafatain Lip Atelier. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/70">
-              Crafted with ❤️ in Dhaka, Bangladesh
+              Curated with ❤️ in Dhaka, Bangladesh | USA Imports
             </p>
           </div>
         </div>
@@ -312,6 +313,9 @@ export default function Home() {
 
       {/* Welcome Popup */}
       <WelcomePopup />
+
+      {/* Mobile Bottom Navigation */}
+      <MobileBottomNav />
     </div>
   )
 }

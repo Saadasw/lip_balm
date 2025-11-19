@@ -1,0 +1,52 @@
+{
+  "name": "Shafatain Lip Atelier",
+  "short_name": "Shafatain",
+  "description": "Premium USA lip care products imported to Bangladesh. Authentic quality guaranteed.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0806",
+  "theme_color": "#d4a574",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/shafatain-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/shafatain-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle", "beauty"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Browse Products",
+      "short_name": "Products",
+      "description": "View all lip care products",
+      "url": "/#products",
+      "icons": [
+        {
+          "src": "/shafatain-logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "My Cart",
+      "short_name": "Cart",
+      "description": "View shopping cart",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/shafatain-logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

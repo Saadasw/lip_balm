@@ -29,28 +29,28 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Luxury Lip Care</span>
+                <span className="gradient-text">Premium USA</span>
                 <br />
                 <span className="text-foreground">
-                  Crafted with
+                  Lip Care
                   <br />
-                  Heritage
+                  in Dhaka
                 </span>
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Experience the fusion of Bengali warmth and Middle Eastern elegance. Our premium lip
-                nourishment blends are enriched with saffron oil, almond butter, and cardamom for
-                unparalleled luxury.
+                Shafatain curates and imports America's finest lip care products. Experience luxury
+                formulations enriched with saffron oil, almond butter, and natural botanicals—bringing
+                international quality to Bangladesh.
               </p>
             </div>
 
             {/* Features */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "24k-Inspired Golden Glow",
-                "Cold-Pressed Botanicals",
-                "Artisan Small Batches",
+                "Imported from USA",
+                "100% Authentic Products",
+                "Premium Quality Guaranteed",
                 "Vegan & Cruelty-Free",
               ].map((feature) => (
                 <div key={feature} className="flex items-center gap-2 text-sm text-primary/80">
@@ -127,8 +127,8 @@ export function HeroSection() {
                     <Sparkles className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <p className="font-bold text-primary text-sm">Winter Special</p>
-                    <p className="text-xs text-muted-foreground">Limited Edition Blend</p>
+                    <p className="font-bold text-primary text-sm">USA Import</p>
+                    <p className="text-xs text-muted-foreground">Premium Authentic</p>
                   </div>
                 </div>
               </div>

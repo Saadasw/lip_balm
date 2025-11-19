@@ -29,15 +29,16 @@ export function BrandStory() {
             </p>
 
             <p>
-              Our journey began with a simple vision: to create lip care that honors the rich traditions of
-              natural beauty while embracing contemporary luxury. Each formula is a love letter to the ancient
-              beauty rituals passed down through generations, reimagined for the modern connoisseur.
+              Our journey began with a simple vision: to bring America's finest lip care to Bangladesh. We
+              carefully curate and import premium products that honor rich beauty traditions while delivering
+              contemporary luxury. Each product is selected for its authentic quality, natural ingredients, and
+              proven excellence.
             </p>
 
             <div className="luxury-divider my-8" />
 
             <p className="text-xl font-medium text-primary calligraphic-accent">
-              "We don't just create lip care — we craft experiences that celebrate your unique beauty story."
+              "We don't just import lip care — we curate premium experiences that celebrate your unique beauty story."
             </p>
           </div>
 
@@ -45,18 +46,18 @@ export function BrandStory() {
           <div className="grid md:grid-cols-3 gap-6 pt-12">
             {[
               {
-                title: "Artisan Crafted",
-                description: "Small-batch production ensures every jar receives meticulous attention",
+                title: "USA Imported",
+                description: "Authentic premium products from America's most trusted brands",
                 icon: "✦",
               },
               {
-                title: "Heritage Inspired",
-                description: "Time-honored ingredients from Bengali and Middle Eastern traditions",
+                title: "Carefully Curated",
+                description: "Every product selected for quality, safety, and luxury experience",
                 icon: "✧",
               },
               {
-                title: "Sustainably Made",
-                description: "Ethically sourced, vegan, and cruelty-free formulations",
+                title: "Quality Guaranteed",
+                description: "100% authentic, vegan, and cruelty-free formulations",
                 icon: "✦",
               },
             ].map((value, index) => (
